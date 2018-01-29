@@ -1,32 +1,37 @@
-public class StudentView {
-	private Student student;
-	
-	public StudentView(Student student) {
-		this.student = student;
-	}
-	
-	public StudentView() {
-		
-	}
-	
-	public void printStudentDetails(Student student) {
-		this.student = student;
-		printStudentDetails();
-	}
-	
-	public void setStudentDetails(Student student) {
-	
-	}
-	
-	public void printStudentDetails() {
-		if (this.student == null) throw new IllegalArgumentException("student");		
 
-		System.out.println("Student's first name is " + this.student.getFirstName());
-		System.out.println("Student's last name is " + this.student.getLastName());
-		System.out.println("Student's email is " + this.student.getEmail());
-		System.out.println("Student's id number is " + this.student.getIdNumber());
-		for(int i = 0; i < this.student.getCourses().size(); i++) {
-			System.out.println(this.student.getCourses().get(i).getCourseName() + this.student.getCourses().get(i).getProfessor().getFirstName() + this.student.getCourses().get(i).getProfessor().getLastName());
-		}
+public class Student {
+	private String firstName;
+	private String lastName;
+	private int idNumber;
+	
+	public Student(String firstName, String lastName, int idNumber) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.idNumber = idNumber;
 	}
+	
+	public String getFirstName() {
+		return this.firstName;
+	}
+	
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	
+	public String getLastName() {
+		return this.lastName;
+	}
+	
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	
+	public int getIdNumber() {
+		return this.idNumber;
+	}
+	
+	public void setIdNumber(int idNumber) {
+		this.idNumber = idNumber;
+	}	
+	
 }
