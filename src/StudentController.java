@@ -1,4 +1,3 @@
-
 public class StudentController {
 	private StudentView studentView;
 	private Student	student;
